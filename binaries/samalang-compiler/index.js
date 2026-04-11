@@ -1,8 +1,9 @@
+#!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-const binaryName = 'sl';
+const binaryName = 'sl-compiler';
 const sourcePath = path.resolve("./sl"); 
 const targetPath = `/usr/local/bin/${binaryName}`;
 
@@ -21,13 +22,10 @@ if (command === 'install') {
             process.exit(1);
         }
 
-        console.log('Mengatur izin eksekusi...');
         execSync(`chmod +x "${sourcePath}"`);
-
-        console.log('Menghubungkan Compiler ke sistem...');
         execSync(`sudo ln -s "${sourcePath}" "${targetPath}"`);
         
-        console.log('Berhasil! Sekarang ketik "sl" di mana saja');
+        console.log(`Berhasil. Sekarang gunakan perintah: ${binaryName}`);
     } catch (error) {
         console.error('Gagal:', error.message);
     }
@@ -35,15 +33,14 @@ if (command === 'install') {
 } else if (command === 'uninstall') {
     try {
         if (fs.existsSync(targetPath)) {
-            console.log('Menghapus akses SamawaLang...');
             execSync(`sudo rm "${targetPath}"`);
-            console.log('Berhasil dicabut.');
+            console.log('Berhasil dihapus.');
         } else {
-            console.log('Memang tidak terinstall.');
+            console.log('Perintah tidak ditemukan di sistem.');
         }
     } catch (error) {
         console.error('Gagal uninstall:', error.message);
     }
 } else {
-    console.log('Gunakan: node setup.js install | uninstall');
+    console.log(`Gunakan: sl-compiler install | uninstall`);
 }
