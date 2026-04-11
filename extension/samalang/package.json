@@ -1,9 +1,13 @@
 {
-  "name": "Samawa Language",
+  "name": "Samawa-Language",
   "publisher": "Rzfan03",
-  "displayName": "Samawa Language",
+  "displayName": "Samawa-Language",
   "description": "Simple and faster language",
   "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Rzfan03/samawa-language.git"
+},
   "icon": "./icon-extension.png",
   "engines": {
     "vscode": "^1.90.0" 
