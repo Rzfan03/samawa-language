@@ -1,0 +1,118 @@
+{
+  "Variable Declaration": {
+    "prefix": "ada",
+    "body": [
+      "ada ${1:variable_name} = ${2:value}"
+    ],
+    "description": "Create a new local variable"
+  },
+  "If Statement (Lamen)": {
+    "prefix": "lamen",
+    "body": [
+      "lamen (${1:condition}) tres",
+      "\t$0",
+      "jure_mo"
+    ],
+    "description": "Basic if ... then ... end block"
+  },
+  "If Else Statement": {
+    "prefix": "lamen_no",
+    "body": [
+      "lamen (${1:condition}) tres",
+      "\t$2",
+      "lamen_no",
+      "\t$0",
+      "jure_mo"
+    ],
+    "description": "If ... then ... else ... end block"
+  },
+  "Else If Statement": {
+    "prefix": "lamen_no_kebali",
+    "body": [
+      "lamen_no_kebali (${1:condition}) tres",
+      "\t$0"
+    ],
+    "description": "Elseif block"
+  },
+  "While Loop (Selama)": {
+    "prefix": "selama",
+    "body": [
+      "selama (${1:condition}) boat",
+      "\t$0",
+      "jure_mo"
+    ],
+    "description": "While loop structure"
+  },
+  "While Loop (Untu)": {
+    "prefix": "untu",
+    "body": [
+      "untu (${1:condition}) boat",
+      "\t$0",
+      "jure_mo"
+    ],
+    "description": "Alternative while loop structure"
+  },
+  "For Loop (Untuk)": {
+    "prefix": "untuk",
+    "body": [
+      "untuk ${1:i} = ${2:1}, ${3:10} boat",
+      "\t$0",
+      "jure_mo"
+    ],
+    "description": "Standard for loop"
+  },
+  "Until Loop (Sampe)": {
+    "prefix": "sampe",
+    "body": [
+      "sampe (${1:condition})",
+      "\t$0",
+      "jure_mo"
+    ],
+    "description": "Repeat until loop structure"
+  },
+  "Function Declaration": {
+    "prefix": "fungsi",
+    "body": [
+      "fungsi ${1:function_name}(${2:parameters})",
+      "\t$0",
+      "semalik ${3:result}",
+      "jure_mo"
+    ],
+    "description": "Define a new function"
+  },
+  "Print to Console": {
+    "prefix": "tulis",
+    "body": [
+      "tulis(${1:\"text\"})"
+    ],
+    "description": "Print or log to console"
+  },
+  "Break Loop": {
+    "prefix": "jangka",
+    "body": [
+      "jangka_mo"
+    ],
+    "description": "Break out of a loop"
+  },
+  "Return Value": {
+    "prefix": "semalik",
+    "body": [
+      "semalik $0"
+    ],
+    "description": "Return a value from a function"
+  },
+  "Null Value": {
+    "prefix": "nda",
+    "body": [
+      "nda_isi"
+    ],
+    "description": "Nil / Null constant"
+  },
+  "Not Operator": {
+    "prefix": "no",
+    "body": [
+      "no "
+    ],
+    "description": "Logical NOT"
+  }
+}

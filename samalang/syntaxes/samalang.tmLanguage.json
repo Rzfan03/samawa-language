@@ -1,0 +1,31 @@
+{
+  "scopeName": "source.sl",
+  "name": "SamawaLang",
+  "patterns": [
+    {
+      "name": "string.quoted.double.samawa",
+      "begin": "\"",
+      "end": "\""
+    },
+    {
+      "name": "constant.numeric.samawa",
+      "match": "\\b[0-9]+\\b"
+    },
+    {
+      "name": "keyword.control.samawa",
+      "match": "\\b(lamen|tres|jure_mo|lamen_no|lamen_no_kebali|selama|boat|untuk|sampe|untu|jangka_mo|no)\\b"
+    },
+    {
+      "name": "keyword.declaration.samawa",
+      "match": "\\b(ada|fungsi|semalik)\\b"
+    },
+    {
+      "name": "constant.language.samawa",
+      "match": "\\b(nda_isi)\\b"
+    },
+    {
+      "name": "support.function.samawa",
+      "match": "\\b(tulis)\\b"
+    }
+  ]
+}
