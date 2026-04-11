@@ -38,3 +38,6 @@ fungsi cek_status(n)
 jure_mo
 
 cek_status(10)
+```
+
+Read Docs : https://samalang.vercel.app/docs
