@@ -1,4 +1,4 @@
-<img src="./extension/samalang/icon-extension.png" height=48 width=48>
+<img src="./extension/samalang/icon-extension.png" height=200 width=200>
 
 # SamawaLang
  a simple and high-performance programming language based on lua
