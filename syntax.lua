@@ -1,6 +1,6 @@
 -- samalang syntax
 
-local kamus = {
+local syntax = {
     ["ada"]      = "local",
     ["untu"]     = "while",
     ["jangka_mo"]  = "break",
@@ -17,7 +17,8 @@ local kamus = {
     ["lamen_no_kebali"] = "elseif",
     ["sampe"] = "until",
     ["untuk"] = "for",
-    ["no"] = "not"
+    ["no"] = "not",
+    ["#"] = "--"
 }
 
-return kamus
+return syntax

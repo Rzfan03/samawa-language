@@ -1,4 +1,8 @@
-umur = 10
-lamen umur < 12 tres
-  tulis("samalang btw!")
+-- komentar
+
+umur = 5
+
+selama umur < 10 boat
+   tulis(umur)
+   umur = umur + 1
 jure_mo
