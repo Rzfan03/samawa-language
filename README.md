@@ -40,4 +40,4 @@ jure_mo
 cek_status(10)
 ```
 
-Read Docs : https://samalang.vercel.app/docs
+Read Docs : https://samalang.netlify.app/
