@@ -1,0 +1,41 @@
+{
+  "name": "samalang",
+  "version": "2.0.0",
+  "description": "SamaLang compiler — Lua-based programming language with Samawa keywords",
+  "type": "module",
+  "bin": {
+    "sl": "./bin/sl.js"
+  },
+  "scripts": {
+    "build:binaries": "node build.js",
+    "test": "node bin/sl.js example.sl",
+    "test:transpile": "node bin/sl.js example.sl --only-transpile",
+    "test:output": "node bin/sl.js example.sl --output example.lua"
+  },
+  "files": [
+    "bin/",
+    "src/",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Samawa-Language/samawa-language"
+  },
+  "keywords": [
+    "samalang",
+    "samawa",
+    "compiler",
+    "transpiler",
+    "lua",
+    "programming-language"
+  ],
+  "author": "Rzfan03",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "chokidar": "^4.0.0"
+  }
+}
