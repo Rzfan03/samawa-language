@@ -2,18 +2,19 @@
   "name": "Samawa-Language",
   "publisher": "Rzfan03",
   "displayName": "Samawa-Language",
-  "description": "Simple and faster language",
-  "version": "0.0.3",
+  "description": "Syntax highlighting and snippets for Samawa Language (.sl)",
+  "version": "0.1.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Rzfan03/samawa-language.git"
+    "url": "https://github.com/Samawa-Language/samawa-language"
   },
   "icon": "./icon-extension.png",
   "engines": {
     "vscode": "^1.90.0"
   },
   "categories": [
-    "Programming Languages"
+    "Programming Languages",
+    "Snippets"
   ],
   "contributes": {
     "languages": [
@@ -43,7 +44,7 @@
     "snippets": [
       {
         "language": "samalang",
-        "path": "./snippets/samawa.code-snippets"
+        "path": "./snippets/samalang.code-snippets.json"
       }
     ]
   }

@@ -7,7 +7,8 @@
  *   npm install -g esbuild
  *
  * Usage:
- *   node build.js              Build for current platform
+ *   node build.js                          Build for current platform
+ *   node build.js --target sl-linux-x64    Build with specific target name
  */
 
 import { execSync } from 'node:child_process';
@@ -38,7 +39,7 @@ function buildBundle() {
   step('Bundling with esbuild...');
   mkdirSync(DIST, { recursive: true });
   execSync(
-    `npx esbuild bin/sl.js --bundle --platform=node --outfile="${BUNDLE}" --format=cjs`,
+    `npx esbuild src/cli.js --bundle --platform=node --outfile="${BUNDLE}" --format=cjs`,
     { stdio: 'pipe' }
   );
   success('Bundle created');
@@ -48,7 +49,10 @@ function buildSEA() {
   const platform = process.platform;
   const arch = process.arch;
   const ext = platform === 'win32' ? '.exe' : '';
-  const binaryName = `sl-${platform}-${arch}${ext}`;
+  const targetIdx = process.argv.indexOf('--target');
+  const binaryName = targetIdx !== -1
+    ? process.argv[targetIdx + 1]
+    : `sl-${platform}-${arch}${ext}`;
   const binaryPath = join(DIST, binaryName);
 
   // Step 1: Generate SEA blob

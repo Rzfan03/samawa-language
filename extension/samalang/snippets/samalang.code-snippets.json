@@ -61,14 +61,14 @@
     ],
     "description": "Standard for loop"
   },
-  "Until Loop (Sampe)": {
-    "prefix": "sampe",
+  "Repeat Loop (Ulang)": {
+    "prefix": "ulang",
     "body": [
-      "sampe (${1:condition})",
+      "ulang",
       "\t$0",
-      "jure_mo"
+      "sampe (${1:condition})"
     ],
-    "description": "Repeat until loop structure"
+    "description": "Repeat loop (runs at least once)"
   },
   "Function Declaration": {
     "prefix": "fungsi",
@@ -107,6 +107,55 @@
       "nda_isi"
     ],
     "description": "Nil / Null constant"
+  },
+  "Boolean True": {
+    "prefix": "tutu",
+    "body": [
+      "tutu"
+    ],
+    "description": "Boolean true"
+  },
+  "Boolean False": {
+    "prefix": "siong",
+    "body": [
+      "siong"
+    ],
+    "description": "Boolean false"
+  },
+  "Goto Label": {
+    "prefix": "lalo",
+    "body": [
+      "lalo ${1:label}"
+    ],
+    "description": "Go to a label"
+  },
+  "Label Definition": {
+    "prefix": "label",
+    "body": [
+      "::${1:label_name}::"
+    ],
+    "description": "Define a goto label"
+  },
+  "Require Module": {
+    "prefix": "kenang",
+    "body": [
+      "ada ${1:module_name} = kenang(\"${2:module}\")"
+    ],
+    "description": "Require/import a module"
+  },
+  "Logical AND": {
+    "prefix": "dan",
+    "body": [
+      "dan "
+    ],
+    "description": "Logical AND"
+  },
+  "Logical OR": {
+    "prefix": "atau",
+    "body": [
+      "atau "
+    ],
+    "description": "Logical OR"
   },
   "Not Operator": {
     "prefix": "no",
